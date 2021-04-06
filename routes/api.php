@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/getMenus/{restaurant}', 'ApiController@getMenus')->name('getMenus');
+Route::get('/getDishes/{menu}','ApiController@getDishes')->name('getDishes');
+
+
+
